@@ -1,7 +1,6 @@
 import argparse
-import cryptography
 from cryptography.fernet import Fernet
-import os
+
 
 def generate_key(output_file):
     # Generate and save encryption key
@@ -15,7 +14,7 @@ def load_key(key_file):
     # Read encryption key from file
     with open(key_file, "rb") as file:
         return file.read()
-    
+
 
 def encrypt_file(input_file, key_file, output_file):
     # Encrypt given file with help of key
